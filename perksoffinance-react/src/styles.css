@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand variables */
+:root {
+  --pf-primary: #117A65; /* deep green */
+  --pf-secondary: #1F6FEB; /* blue */
+  --pf-accent: #22C55E;
+}
+.selection\:bg-emerald-100 *::selection { background-color: #d1fae5; }
