@@ -9,23 +9,16 @@ import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Enroll from './pages/Enroll.jsx'
 export default function App(){
-  React.useEffect(()=>{
-    document.documentElement.style.setProperty('--pf-primary','#117A65')
-    document.documentElement.style.setProperty('--pf-secondary','#1F6FEB')
-    document.documentElement.style.setProperty('--pf-accent','#22C55E')
-  },[])
-  return (
-    <div className="min-h-screen">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/course" element={<Course />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/enroll" element={<Enroll />} />
-      </Routes>
-      <Footer />
-    </div>
-  )
+  return (<div className='min-h-screen'>
+    <Nav/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/course' element={<Course/>}/>
+      <Route path='/pricing' element={<Pricing/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/contact' element={<Contact/>}/>
+      <Route path='/enroll' element={<Enroll/>}/>
+    </Routes>
+    <Footer/>
+  </div>)
 }

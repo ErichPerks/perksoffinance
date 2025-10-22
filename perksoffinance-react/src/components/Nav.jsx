@@ -6,7 +6,7 @@ export default function Nav(){
     <nav className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80 border-b">
       <div className="container py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <LionMark className="h-8 w-8" />
+          <LionMark className="h-9 w-9" />
           <span className="font-extrabold tracking-tight text-xl md:text-2xl text-slate-800">
             Perks of <span style={{color:'var(--pf-secondary)'}}>Finance</span>
           </span>
