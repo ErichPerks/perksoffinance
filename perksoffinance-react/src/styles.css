@@ -1,11 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Brand variables */
-:root {
-  --pf-primary: #117A65; /* deep green */
-  --pf-secondary: #1F6FEB; /* blue */
-  --pf-accent: #22C55E;
-}
-.selection\:bg-emerald-100 *::selection { background-color: #d1fae5; }
+:root{--pf-primary:#117A65;--pf-secondary:#1F6FEB;--pf-accent:#22C55E}
+a{text-decoration:none}
+.container{max-width:80rem;margin:0 auto;padding:0 1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:1rem;font-weight:500;box-shadow:0 1px 1px rgba(0,0,0,.05);padding:.5rem 1rem;transition:.2s}
+.btn-primary{background:var(--pf-secondary);color:#fff}
+.btn-primary:hover{filter:brightness(1.05)}
+.btn-outline{border:1px solid rgb(203 213 225);color:rgb(30 41 59)}
+.card{background:#fff;border-radius:1rem;border:1px solid rgb(226 232 240)}
+.card-header{padding:1.25rem;border-bottom:1px solid rgb(226 232 240)}
+.card-title{font-weight:600;color:rgb(15 23 42)}
+.card-desc{font-size:.875rem;color:rgb(100 116 139)}
+.card-content{padding:1.25rem}

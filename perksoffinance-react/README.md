@@ -1,30 +1,34 @@
-# Perks of Finance — React + Vite + Tailwind
+# Perks of Finance — 5‑Day Masterclass Site (Gmail wired)
 
-A clean landing page for the Perks of Finance cohort program.
-
-## Quick start
-
+## Local dev
 ```bash
 npm i
 npm run dev
-# then open http://localhost:5173
 ```
 
-## Build & deploy
-```bash
-npm run build
-# output in dist/
+## Vercel build
+- Framework: **Vite**
+- Build: `npm run build`
+- Output: `dist`
+
+## Forms
+- Default fallback is **mailto:perksoffinance@gmail.com** for Contact + Enroll forms.
+- To capture without opening mail app, set **Formspree**:
+  - Add env var in Vercel: `VITE_FORMSPREE_ID=xxxxxxx`
+  - Redeploy
+
+## Stripe (optional)
+Set env vars to turn on checkout links:
+```
+VITE_STRIPE_LINK_STARTER=https://buy.stripe.com/...
+VITE_STRIPE_LINK_COHORT=https://buy.stripe.com/...
+VITE_STRIPE_LINK_VIP=https://buy.stripe.com/...
 ```
 
-### Deploy to Vercel (no GitHub)
-1. Go to https://vercel.com/new
-2. Click **Upload** → select the project folder (or a .zip of it)
-3. Framework: React (Vite)
-4. Build command: `npm run build`
-5. Output directory: `dist`
-
-### DNS (Namecheap → Vercel)
-- A record @ → 76.76.21.21
-- CNAME www → cname.vercel-dns.com
-
-Set your primary domain in Vercel and 301‑redirect the other domain to it.
+## Routes
+/           Home
+/course     5‑day breakdown
+/pricing    Pricing (Stripe-ready)
+/about      Instructor + toolkit
+/contact    Contact form
+/enroll     Waitlist form
